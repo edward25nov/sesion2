@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="tests.RegistrationTest" time="10.957" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="tests.NewAccountTest" time="48.355" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -60,5 +60,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="execute" classname="tests.RegistrationTest" time="10.957"/>
+  <testcase name="newAccountTest[0]" classname="tests.NewAccountTest" time="11.021"/>
+  <testcase name="newAccountTest[1]" classname="tests.NewAccountTest" time="12.613"/>
+  <testcase name="newAccountTest[2]" classname="tests.NewAccountTest" time="13.668"/>
+  <testcase name="newAccountTest[3]" classname="tests.NewAccountTest" time="11.053"/>
 </testsuite>
