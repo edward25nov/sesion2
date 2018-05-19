@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="tests.SerenityTest" skipped="0" tests="1" time="0.14" timestamp="2018-05-139 11:51:07"><testcase classname="tests.SerenityTest" name="LOGIN PAGE"><error message="java.lang.NoSuchMethodError: org.openqa.selenium.chrome.ChromeOptions.addArguments([Ljava/lang/String;)V" type="net.thucydides.core.webdriver.WebdriverAssertionError">java.lang.NoSuchMethodError: org.openqa.selenium.chrome.ChromeOptions.addArguments([Ljava/lang/String;)V</error><system-err>java.lang.NoSuchMethodError: org.openqa.selenium.chrome.ChromeOptions.addArguments([Ljava/lang/String;)V&#13;
+steps.LoginSteps.gotoLogin(LoginSteps.java:14)&#13;
+tests.SerenityTest._loginTest(SerenityTest.java:31)&#13;
+</system-err></testcase></testsuite>

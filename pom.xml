@@ -25,8 +25,13 @@
         <includes>
         <include>**/*Test.java</include>
         <include>**/When*.java</include>
+        <include>**/features/**/When*.java</include>     
         </includes>
-        <includes></includes>
+      	<systemProperties>
+                        <webdriver.driver>${webdriver.driver}</webdriver.driver> 
+                        <surefire.rerunFailingTestsCount>${surefire.rerunFailingTestsCount}</surefire.rerunFailingTestsCount>
+                        <surefire.rerunFailingTestsCount>${surefire.rerunFailingTestsCount}</surefire.rerunFailingTestsCount>
+        </systemProperties>
         </configuration>
       </plugin>
       
@@ -47,12 +52,52 @@
           	<executable>C:\Program Files\Java\jdk1.8.0_144\bin\javac.exe</executable>
           </configuration>
         </plugin>
+        
+       <!--  <plugin>
+                <artifactId>maven-failsafe-plugin</artifactId>                  
+                <version>2.18</version>
+                <configuration>
+                    <includes>
+                        <include>**/features/**/When*.java</include>                  
+                    </includes>
+                    <systemProperties>
+                        <webdriver.driver>${webdriver.driver}</webdriver.driver> 
+                        <surefire.rerunFailingTestsCount>${surefire.rerunFailingTestsCount}</surefire.rerunFailingTestsCount>
+                        <surefire.rerunFailingTestsCount>${surefire.rerunFailingTestsCount}</surefire.rerunFailingTestsCount>
+                    </systemProperties>
+                </configuration>
+            </plugin> -->
+            <plugin>
+                <groupId>net.serenity-bdd.maven.plugins</groupId>       
+                <artifactId>serenity-maven-plugin</artifactId>
+                <version>${serenity.maven.version}</version>
+                <dependencies>
+                     <dependency>
+                        <groupId>net.serenity-bdd</groupId>
+                        <artifactId>core</artifactId>
+                        <version>${serenity.version}</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>serenity-reports</id>
+                        <phase>post-integration-test</phase>             
+                        <goals>
+                            <goal>aggregate</goal>                       
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            
     </plugins> 
   </build>
   
   <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   <junit.version>4.12</junit.version>
+  <serenity.version>1.0.47</serenity.version>
+  <serenity.maven.version>1.0.47</serenity.maven.version>
+   <webdriver.driver>chrome</webdriver.driver>
   </properties>
   
   <dependencies>
@@ -71,5 +116,31 @@
 	    <artifactId>commons-io</artifactId>
 	    <version>2.6</version>
 	</dependency>
+	
+	 <dependency>
+            <groupId>net.serenity-bdd</groupId>     
+            <artifactId>core</artifactId>
+            <version>${serenity.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>     
+            <artifactId>serenity-junit</artifactId>
+            <version>${serenity.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+		 <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-htmlunit-driver</artifactId>
+        <version>2.52.0</version>
+    	</dependency>
+    	<dependency>
+    		<groupId>com.google.guava</groupId>
+    		<artifactId>guava</artifactId>
+    		<version>23.0</version>
+		</dependency>
   </dependencies>
 </project>

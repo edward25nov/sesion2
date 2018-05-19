@@ -1,6 +1,8 @@
 package tests;
 
 import java.util.List;
+
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -38,8 +40,8 @@ public class NewAccountTest extends BaseTest{
 	public void newAccountTest()
 	{
 		//System.out.println(this.cuenta.print());
-		page.AccountPage obj = new page.AccountPage(this.getDriver());
-		obj.newAccount(this.cuenta);
+	   page.AccountPage obj = new page.AccountPage(this.getDriver());
+       obj.newAccount(this.cuenta);
 	}
 	
 	// Este metodo es designado a pasar los parametros dentro de la clase al constructor

@@ -5,6 +5,7 @@ import org.junit.Test;
 import app.Endpoints;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 
 
 public class LoginTest extends BaseTest{

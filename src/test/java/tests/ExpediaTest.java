@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import app.Endpoints;
@@ -11,6 +12,7 @@ public class ExpediaTest extends BaseTest{
 		// TODO Auto-generated constructor stub
 	}
 	
+	@Ignore
 	@Test
 	public void hotelReservation() 
 	{

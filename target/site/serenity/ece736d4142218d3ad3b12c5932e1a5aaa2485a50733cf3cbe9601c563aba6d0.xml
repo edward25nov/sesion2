@@ -1,0 +1,24 @@
+<acceptance-test-run title="LOGIN PAGE" name="_loginTest" steps="5" successful="0" failures="1" skipped="4" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="141" timestamp="2018-05-19T11:51:07.044-06:00">
+  <user-story id="tests.SerenityTest" name="Serenity test" path="tests"/>
+  <tags>
+    <tag name="Serenity test" type="story"/>
+  </tags>
+  <test-step result="FAILURE" duration="78">
+    <description>Goto login</description>
+    <error>java.lang.NoSuchMethodError: org.openqa.selenium.chrome.ChromeOptions.addArguments([Ljava/lang/String;)V</error>
+    <exception>net.thucydides.core.webdriver.WebdriverAssertionError:java.lang.NoSuchMethodError: org.openqa.selenium.chrome.ChromeOptions.addArguments([Ljava/lang/String;)V&#xd;
+[steps.LoginSteps.gotoLogin(LoginSteps.java:14), tests.SerenityTest._loginTest(SerenityTest.java:31)]</exception>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Setusername</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Setpass1</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="16">
+    <description>Setpass2</description>
+  </test-step>
+  <test-step result="SKIPPED" duration="0">
+    <description>Submit</description>
+  </test-step>
+</acceptance-test-run>
