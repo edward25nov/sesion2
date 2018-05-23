@@ -1,13 +1,14 @@
 package tests;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.*;
 
+import app.DataReaders;
 import app.WebDriverCreator;
-import net.serenitybdd.core.Serenity;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
@@ -21,18 +22,31 @@ public class SerenityTest {
 	
 	@Steps
 	steps.LoginSteps pasos;
-	
-	
+
 	@Test
 	@Title("LOGIN PAGE")
 	public void _loginTest() 
-	{ //  ChromeOptions p = new ChromeOptions();
-		//p.addArguments("");
-		pasos.gotoLogin();
-		pasos.setusername();
-		pasos.setpass1();
-		pasos.setpass2();
-		pasos.submit();
+	{ 
+		pasos.gotoLogin(driver);
+		pasos.setusername(driver);
+		pasos.setpass1(driver);
+		pasos.setpass2(driver);
+		pasos.submit(driver);
+
 	}
+	
+	@Before
+	public void before() 
+	{
+		driver = WebDriverCreator.getChromeDriver();
+	}
+	
+	@After
+	public void after() 
+	{
+		driver.close();
+		driver.quit();
+	}
+	
 	
 }
